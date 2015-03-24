@@ -32,8 +32,8 @@ $db = getDB();
 				</tr>
 				<?php } ?>
 			</table>
-			<input type="text" name="jp-word" placeholder="japanese" class="value">
-			<input type="text" name="en-word" placeholder="latin" class="value">
+			<input type="text" name="jp-word" placeholder="japanese" class="jp-word">
+			<input type="text" name="en-word" placeholder="latin" class="en-word">
 			<input type="button" value="Add" class="add-button button">
 			<div class="message"></div>
 		</div>
