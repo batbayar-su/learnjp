@@ -39,7 +39,7 @@ $(document).ready(function() {
     var key = e.which;
     if(key == 13) {
       $('.ok-button').click();
-      return false;  
+      return false;
     }
   });
 
@@ -95,5 +95,10 @@ $(document).ready(function() {
         $('.message').html(data);
       }
     }); // end of ajax done
-  }); // end of delete button
+  }); // end of ok button
+
+
+  $('.next-button').click(function() {
+
+  }); // end of next button
 });

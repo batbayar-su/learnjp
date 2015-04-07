@@ -4,7 +4,7 @@ function getDB() {
 	$username = 'root';
 	$password = '123';
 	$database = 'learnjp_db';
-	
+
 	$connection = mysqli_connect($server, $username, $password, $database);
 	if (mysqli_connect_errno()) {
 	   die("DB Connection failed: " . mysqli_connect_error());
@@ -23,7 +23,7 @@ function getInit() {
 
 function getTotal() {
 	$db = getDB();
-	$count = $db->query("SELECT count(1) as count FROM dictionary")->fetch_object()->count;
+	$count = $db->query("SELECT count(1) as count FROM dictionary WHERE enabled = 1")->fetch_object()->count;
 	return $count;
 }
 ?>

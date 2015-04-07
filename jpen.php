@@ -24,6 +24,7 @@ $init = getInit();
 			<input type="hidden" name="id" value="<?=$init->id?>">
 			<input type="text" name="en-word" placeholder="latin" class="value">
 			<input type="button" value="OK" class="ok-button button">
+			<input type="button" class="next-button button" value="Next">
 			<div class="message"></div>
 		</div>
 

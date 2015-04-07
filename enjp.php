@@ -23,7 +23,8 @@ $init = getInit();
 			<input type="hidden" name="action" value="enjp">
 			<input type="hidden" name="id" value="<?=$init->id?>">
 			<input type="text" name="jp-word" placeholder="japanese" class="value">
-			<input type="button" value="OK" class="ok-button button">
+			<input type="button" class="ok-button button" value="OK">
+			<input type="button" class="next-button button" value="Next">
 			<div class="message"></div>
 		</div>
 

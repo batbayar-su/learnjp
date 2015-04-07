@@ -1,3 +1,5 @@
+/* --------------- Basic --------------- */
+h1 { font-size: 4em }
 .container {
 	width: 600px;
 	margin: 0 auto;
@@ -40,6 +42,9 @@
 }
 .delete-button {
 	background-color: #FA6900;
+}
+.next-button {
+	margin-left: 340px;
 }
 .value {
 	height: 19px;

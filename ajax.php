@@ -1,4 +1,4 @@
-<?php 
+<?php
 require 'db.php';
 $db = getDB();
 if(isset($_POST['action'])) {
@@ -35,7 +35,7 @@ if(isset($_POST['action'])) {
 		$ids = $_POST['ids'];
 		$result = '';
 		do {
-			$result = $db->query("SELECT r1.* FROM dictionary AS r1 JOIN (SELECT CEIL(RAND() * (SELECT MAX(id) FROM dictionary)) AS id) AS r2 WHERE r1.id >= r2.id AND r1.id NOT IN ($ids) ORDER BY r1.id ASC LIMIT 1;")->fetch_object();
+			$result = $db->query("SELECT r1.* FROM dictionary AS r1 JOIN (SELECT CEIL(RAND() * (SELECT MAX(id) FROM dictionary)) AS id) AS r2 WHERE r1.id >= r2.id AND r1.id NOT IN ($ids) and enabled = 1 ORDER BY r1.id ASC LIMIT 1;")->fetch_object();
 		} while(!$result);
 		print $result->jp . "::" . $result->en . "::" . $result->id;
 	} else {
